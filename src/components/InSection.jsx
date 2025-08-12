@@ -58,11 +58,12 @@ export default function InSection() {
             key={idx}
             className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200"
           >
-            <div className="relative h-80">
+            <div className="relative">
               <Image
                 src={product.img}
                 alt={product.title}
-                fill
+                 height={500}
+                width={500}
                 className="object-cover"
               />
             </div>

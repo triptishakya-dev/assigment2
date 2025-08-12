@@ -26,7 +26,8 @@ export default function BestProduct() {
   return (
     <section className="bg-[#f9f9f1] py-16 px-6 md:px-20">
       {/* Top Header */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10">
+     <div className="max-w-6xl mx-auto w-full">
+       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10 ">
         <div className="flex items-center gap-2 mb-4 md:mb-0">
           <span className="w-3 h-3 rounded-full bg-gray-800"></span>
           <span className="text-gray-700 text-sm font-medium">
@@ -55,7 +56,8 @@ export default function BestProduct() {
               <Image
                 src={product.img}
                 alt={product.name}
-                fill
+                height={500}
+                width={500}
                 className="object-cover"
               />
             </div>
@@ -74,6 +76,7 @@ export default function BestProduct() {
           </div>
         ))}
       </div>
+     </div>
     </section>
   );
 }

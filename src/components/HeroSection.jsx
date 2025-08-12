@@ -1,15 +1,16 @@
 // components/GlowNaturallySection.tsx
 import Image from "next/image";
+import { FiHeadphones } from "react-icons/fi";
 
 export default function HeroSection() {
   return (
-    <section className="bg-[#EFF5E1] py-16 px-6 md:px-20 relative overflow-hidden">
+    <section className="bg-[#EFF5E1] h-[100vh] max-h-[100vh] py-16 px-6 md:px-20 relative overflow-hidden flex flex-col justify-between">
       {/* Top Row */}
       <div className="flex justify-between items-start">
         {/* Left Text */}
         <p className="max-w-xs text-sm text-gray-700">
-          Transform your skincare routine with premium products that restore, protect, and
-          enhance your natural glow every day.
+          Transform your skincare routine with premium products that restore,
+          protect, and enhance your natural glow every day.
         </p>
 
         {/* Center Heading */}
@@ -29,14 +30,14 @@ export default function HeroSection() {
       </div>
 
       {/* Middle Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between mt-10 relative">
+      <div className="flex flex-col md:flex-row items-center justify-center mt-10 relative">
         {/* Left Button */}
-        <button className="bg-gray-800 text-white px-5 py-2 rounded-full text-sm">
+        <button className="bg-gray-800 text-white px-5 py-2 rounded-full text-sm mb-6 md:mb-0 md:absolute md:left-0">
           Shop Now
         </button>
 
         {/* Large Background Text */}
-        <span className="absolute text-[10rem] md:text-[12rem] font-extrabold text-black opacity-50 left-0 top-16 tracking-tight">
+        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[10rem] md:text-[12rem] font-extrabold text-black opacity-50 tracking-tight ">
           SKINCARE
         </span>
 
@@ -45,48 +46,26 @@ export default function HeroSection() {
           <Image
             src="/images/fst.jpg"
             alt="Glow Naturally"
-            width={400}
-            height={450}
-            className="object-cover rounded-xl  "
+            width={300}
+            height={250}
+            className="object-cover rounded-xl"
           />
 
           {/* Badge */}
-          <div className="absolute bottom-4 left-4 bg-[#eef3e6] px-4 py-2 rounded-full flex items-center gap-2 shadow-sm text-sm">
-            <div className="w-7 h-7 rounded-full bg-[#1f2937] flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 4v16m8-8H4"
-                />
-              </svg>
+          {/* Small Badge (Only when image visible) */}
+          <div
+            className="absolute bottom-4 left-1/2 -translate-x-1/2
+            flex items-center gap-3 bg-[#FEFFF4] px-4 py-2 rounded-full shadow-lg
+            z-10 max-w-[220px]"
+          >
+            <div className="w-10 h-10 rounded-full flex items-center justify-center text-white bg-[#2D3B36] shadow p-2">
+              <FiHeadphones size={22} />
             </div>
-            While giving you an invigorating cleansing experience.
+            <span className="text-sm text-gray-800 font-medium leading-tight text-center">
+              While giving you an invigorating  <br /> cleansing experience.
+            </span>
           </div>
         </div>
-      </div>
-
-      {/* Bottom Description */}
-      <div className="mt-10 text-center md:text-left space-y-4">
-        <p className="text-lg text-gray-800 font-medium leading-relaxed">
-          Experience the ultimate in skincare with our expertly formulated products,
-          crafted to nourish, protect, and rejuvenate your skin. Combining the finest{" "}
-          <span className="font-bold">natural ingredients</span> with{" "}
-          <span className="text-gray-500">advanced science</span>, our collection ensures
-          every skin type can achieve a radiant, healthy glow.
-        </p>
-        <p className="text-gray-500 leading-relaxed">
-          Embrace your beauty with confidence every day. Experience the ultimate in
-          skincare with our expertly formulated products, crafted to nourish, protect,
-          and rejuvenate your skin.
-        </p>
       </div>
     </section>
   );

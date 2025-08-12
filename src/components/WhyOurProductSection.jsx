@@ -1,107 +1,100 @@
 // components/SkinCareSection.tsx
 import Image from "next/image";
+import { FiHeadphones } from "react-icons/fi";
 
 export default function WhyOurProductSection() {
   return (
-    <section className="bg-[#fdfcf4] py-16 px-6 md:px-20 flex flex-col md:flex-row items-center gap-12">
-      {/* Left Content */}
-      <div className="md:w-1/2 space-y-8">
-        {/* Button */}
-        <button className="flex items-center gap-2 px-4 py-1 rounded-full bg-white border border-gray-300 text-sm shadow-sm">
-          <span className="w-2 h-2 bg-black rounded-full"></span>
-          Why Our Products
-        </button>
-
-        {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-semibold leading-snug text-gray-800">
-          YOUR SKIN DESERVES <br /> THE BEST CARE.
-        </h2>
-
-        {/* Description */}
-        <p className="text-gray-500 max-w-md leading-relaxed">
-          Discover a curated collection of skincare products designed to rejuvenate,
-          protect, and pamper your skin. Explore our range crafted with love backed
-          by science, and inspired by nature.
-        </p>
-
-        {/* Features */}
-        <div className="space-y-6">
-          <div>
-            <p className="flex items-center gap-2 text-lg font-medium">
-              <span className="text-gray-400 text-xl font-light">01</span>
-              Bio Ingredients
-            </p>
-            <p className="text-gray-500 text-sm leading-relaxed">
-              Get naturally beautiful and transform with our bio ingredients creams
-              for healthy, radiant skin.
-            </p>
+    <section className="bg-[#fdfcf4]">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row h-[80vh] py-10 gap-10">
+        {/* Left Content */}
+        <div className="w-full lg:w-1/2 h-full space-y-8 flex flex-col justify-center ">
+          {/* Button */}
+          {/* Small Badge (Only when image visible) */}
+          <div
+            className="
+  flex items-center gap-3 bg-[#FEFFF4] px-4 py-2 rounded-full shadow-lg
+  z-10 max-w-[220px]"
+          >
+            <div className="w-10 h-10 rounded-full flex items-center justify-center text-white bg-[#2D3B36] shadow p-2">
+              <FiHeadphones size={22} />
+            </div>
+            <span className="text-sm text-gray-800 font-medium leading-tight text-center">
+              Why Our Products
+            </span>
           </div>
 
-          <div>
-            <p className="flex items-center gap-2 text-lg font-medium">
-              <span className="text-gray-400 text-xl font-light">02</span>
-              Everything Natural
-            </p>
-            <p className="text-gray-500 text-sm leading-relaxed">
-              Pure ingredients for pure skin. The perfect solution for your skin care
-              needs.
-            </p>
-          </div>
+          {/* Heading */}
+          <h2 className="text-3xl md:text-4xl font-semibold md:font-light leading-snug text-gray-800">
+            YOUR SKIN DESERVES <br /> THE BEST CARE.
+          </h2>
 
-          <div>
-            <p className="flex items-center gap-2 text-lg font-medium">
-              <span className="text-gray-400 text-xl font-light">03</span>
-              <a href="#" className="text-blue-600 underline">
-                All Handmade
-              </a>
-            </p>
-            <p className="text-gray-500 text-sm leading-relaxed">
-              Made with love and care. Just for you. Give your skin the tender loving
-              care it deserves.
-            </p>
+          {/* Description */}
+          <p className="text-gray-500 max-w-md md:text-sm leading-relaxed">
+            Discover a curated collection of skincare products designed to
+            rejuvenate, protect, and pamper your skin. Explore our range crafted
+            with love, backed by science, and inspired by nature.
+          </p>
+
+          {/* Features */}
+          <div className="space-y-6">
+            {[
+              {
+                num: "01",
+                title: "Bio Ingredients",
+                desc: "Get naturally beautiful skin with our bio-ingredient creams for healthy, radiant skin.",
+              },
+              {
+                num: "02",
+                title: "Everything Natural",
+                desc: "Pure ingredients for pure skin. The perfect solution for your skincare needs.",
+              },
+              {
+                num: "03",
+                title: "All Handmade",
+                desc: "Made with love and care. Just for you. Give your skin the tender loving care it deserves.",
+              },
+            ].map((item, i) => (
+              <div key={i}>
+                <p className="flex items-center gap-2 text-lg font-medium md:text-4xl text-[#2D3B36]">
+                  <span className="text-[#2D3B36] text-xl md:text-3xl font-light w-12 md:w-16 flex-shrink-0">
+                    {item.num}
+                  </span>
+                  {item.title}
+                </p>
+                <p className="text-gray-500 text-sm leading-relaxed pl-[3.5rem] md:pl-[4.5rem] w-[250px]">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
 
-      {/* Right Content */}
-      <div className="md:w-1/2 relative">
-        <div className="rounded-xl overflow-hidden">
-          <Image
-            src="/images/sec.jpg"
-            alt="Skin Care"
-            width={500}
-            height={600}
-            className="object-cover rounded-xl"
-          />
-        </div>
-
-        {/* Award Badge */}
-        <div className="absolute bottom-4 left-4 bg-[#f4f4e8] px-4 py-2 rounded-full flex items-center gap-2 shadow-sm text-sm">
-          <div className="w-7 h-7 rounded-full bg-[#1f2937] flex items-center justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 10l4.553-2.276a1 1 0 01.894 0l1.553.776a1 1 0 01.553.894v5.212a1 1 0 01-.553.894l-1.553.776a1 1 0 01-.894 0L15 14m0 0v-4m0 4l-4 2m0 0l-4-2m4 2v4m-4-6V8m0 0l4-2m0 0l4 2"
-              />
-            </svg>
+        {/* Right Content */}
+        <div className="w-full lg:w-1/2 h-full relative flex flex-col">
+          <div className="rounded-xl overflow-hidden flex-1">
+            <Image
+              src="/images/sec.jpg"
+              alt="Skin Care"
+              width={1920}
+              height={1080}
+              className="object-cover w-full h-full"
+              priority
+            />
           </div>
-          Best Skin Care Product Award Winning
-        </div>
 
-        {/* Footer Text */}
-        <div className="flex justify-between text-gray-500 text-xs mt-4 px-1">
-          <span>SINCE 2001</span>
-          <a href="#" className="hover:underline">
-            LEARN MORE
-          </a>
+          {/* Footer Text */}
+          <div
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 lg:left-6 lg:translate-x-0
+            flex items-center gap-3 bg-[#FEFFF4] px-5 py-3 rounded-full shadow-lg
+            z-10 max-w-[240px]"
+          >
+            <div className="w-10 h-10 rounded-full flex items-center justify-center text-white bg-[#2D3B36] shadow p-2">
+              <FiHeadphones size={22} />
+            </div>
+            <span className="text-sm text-gray-800 font-medium leading-tight text-center">
+              Best Skin Care Product <br /> Award Winning
+            </span>
+          </div>
         </div>
       </div>
     </section>

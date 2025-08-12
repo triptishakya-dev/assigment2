@@ -34,38 +34,49 @@ export default function FaqSection() {
   ];
 
   return (
-    <section className="bg-[#FAFAF0] ">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className="bg-[#FAFAF0] py-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left: Image */}
-        <div className="relative">
-          <div className="relative rounded-2xl overflow-hidden">
+        <div className="relative h-full">
+          {/* Show only on mobile & desktop, hide on tablet */}
+          <div
+            className="block md:hidden lg:block relative rounded-2xl overflow-hidden mx-auto lg:mx-0
+                          h-[300px] lg:h-[450px] w-full max-w-[500px]"
+          >
             <Image
               src="/images/nec.jpg"
               alt="Product"
               width={600}
               height={600}
-              className="object-cover"
+              className="object-cover w-full h-full"
             />
-          </div>
-          {/* Small Badge */}
-          <div className="absolute -bottom-6 left-6 flex items-center gap-3 bg-[#DDE4D4] px-4 py-2 rounded-full shadow">
-            <div className="w-8 h-8 rounded-full  flex items-center justify-center text-black bg-white">
-              <FiHeadphones size={16} />
+
+            {/* Small Badge (Only when image visible) */}
+            <div
+              className="absolute bottom-4 left-1/2 -translate-x-1/2
+  flex items-center gap-3 bg-[#FEFFF4] px-4 py-2 rounded-full shadow-lg
+  z-10 max-w-[220px]"
+            >
+              <div className="w-10 h-10 rounded-full flex items-center justify-center text-white bg-[#2D3B36] shadow p-2">
+                <FiHeadphones size={22} />
+              </div>
+              <span className="text-sm text-gray-800 font-medium leading-tight text-center">
+                24/7 We’re Here <br /> to Help You
+              </span>
             </div>
-            <span className="text-sm text-gray-800 font-medium">
-              24/7 We’re Here to Help You
-            </span>
           </div>
         </div>
 
         {/* Right: FAQ */}
-        <div className="flex justify-start flex-col">
-          <button className="flex items-center justify-center gap-4 border border-black px-4 w-70 py-1 rounded-full text-sm mb-4 text-black">
-            <span className="w-3 h-3 bg-[#13281D] rounded-full "></span>
+        <div className="flex flex-col justify-center gap-8 px-4 lg:px-0">
+          {/* Tag */}
+          <button className="flex items-center justify-center lg:justify-start gap-4 border border-black px-4 py-1 rounded-full text-sm text-black w-fit">
+            <span className="w-3 h-3 bg-[#13281D] rounded-full"></span>
             Frequently Asked Question
           </button>
 
-          <h2 className="text-3xl font-medium text-gray-800 leading-snug mb-6 ">
+          {/* Heading */}
+          <h2 className="text-2xl lg:text-3xl font-medium text-gray-800 leading-snug">
             Answers to Your
             <br />
             Skincare Questions, All
@@ -73,11 +84,12 @@ export default function FaqSection() {
             in One Place.
           </h2>
 
-          <div className="flex flex-col gap-2  ">
+          {/* FAQ List */}
+          <div className="flex flex-col gap-3">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className={`border border-gray-300 rounded-md overflow-hidden`}
+                className="border border-gray-300 rounded-md overflow-hidden"
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === idx ? -1 : idx)}

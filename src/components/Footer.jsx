@@ -2,13 +2,13 @@ import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2B3631] text-[#D1D9D0] relative overflow-hidden">
+    <footer className="bg-[#2B3631] text-[#D1D9D0] relative overflow-hidden py-20">
       {/* Background Large Text */}
       <div className="absolute bottom-0 left-0 text-[12rem] font-bold text-white/5 tracking-widest select-none leading-none">
         SKINCARE
       </div>
 
-      <div className="max-w-7xl mx-auto px-8 py-20 grid grid-cols-1 md:grid-cols-2 relative z-10">
+<div className="max-w-6xl mx-auto px-8 py-20 grid grid-cols-1 md:grid-cols-2 relative z-10 ">
         {/* Left Side */}
         <div className="flex flex-col justify-between">
           <div>

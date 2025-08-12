@@ -1,4 +1,5 @@
 import BestProduct from "@/components/BestProduct";
+import DescriptionSection from "@/components/DescriptionSection";
 import FaqSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 
@@ -15,6 +16,7 @@ export default function Home() {
     <div>
       <Navbar/>
       <HeroSection />
+      <DescriptionSection/>
       <WhyOurProductSection />
       <BestProduct />
       <OutSideSection />
