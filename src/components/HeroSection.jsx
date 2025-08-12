@@ -37,7 +37,7 @@ export default function HeroSection() {
         </button>
 
         {/* Large Background Text */}
-        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[10rem] md:text-[12rem] font-extrabold text-black opacity-50 tracking-tight ">
+        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[8rem] md:text-[12rem] font-extrabold text-black opacity-50 tracking-tight ">
           SKINCARE
         </span>
 
