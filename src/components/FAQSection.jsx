@@ -37,7 +37,7 @@ export default function FaqSection() {
     <section className="bg-[#FAFAF0] py-12">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left: Image */}
-        <div className="relative h-full">
+        <div className="relative h-full hidden md:block">
           {/* Show only on mobile & desktop, hide on tablet */}
           <div
             className="block md:hidden lg:block relative rounded-2xl overflow-hidden mx-auto lg:mx-0

@@ -51,8 +51,7 @@ export default function HeroSection() {
             className="object-cover rounded-xl"
           />
 
-          {/* Badge */}
-          {/* Small Badge (Only when image visible) */}
+          {/* Small Badge */}
           <div
             className="absolute bottom-4 left-1/2 -translate-x-1/2
             flex items-center gap-3 bg-[#FEFFF4] px-4 py-2 rounded-full shadow-lg

@@ -4,7 +4,7 @@ import FaqSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 
 import HeroSection from "@/components/HeroSection";
-import InSection from "@/components/InSection";
+import ProductSection from "@/components/InSection";
 import Navbar from "@/components/Navbar";
 
 import OutSideSection from "@/components/OutSideSection";
@@ -20,7 +20,7 @@ export default function Home() {
       <WhyOurProductSection />
       <BestProduct />
       <OutSideSection />
-      <InSection/>
+      <ProductSection/>
       <FaqSection/>
       <Footer/>
     </div>
